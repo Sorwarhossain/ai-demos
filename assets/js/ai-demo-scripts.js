@@ -5,7 +5,8 @@
 
     // init Isotope
 var $grid = $('#ai_demos_wrapper').isotope({
-    itemSelector: '.ai_demos_item'
+    itemSelector: '.ai_demos_item',
+    layoutMode: 'cellsByRow',
 });
   
 // store filter for each group
