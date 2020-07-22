@@ -49,6 +49,8 @@ function concatValues( obj ) {
         $("#ai_demos_wrapper").isotope({
             filter: '*'
         });
+        $('.aidemos_filters .filter_button').removeClass('is-checked');
+
     });
     
 
