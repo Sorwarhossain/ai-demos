@@ -48,6 +48,12 @@
     padding: 25px;
     transition: all 300ms ease-in-out;
 }
+ul.ai_filter_list li.filter_button.is-checked {
+    background-color: #112e51;
+}
+ul.ai_filter_list li.filter_button.is-checked a {
+    color: #fff !important;
+}
 .ai_demos_item:hover .ai_demo_content_hover {
     top: 0;
 }

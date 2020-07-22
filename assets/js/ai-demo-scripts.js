@@ -12,6 +12,7 @@ var $grid = $('#ai_demos_wrapper').isotope({
 var filters = {};
 
 $('.aidemos_filters').on( 'click', '.filter_button', function( event ) {
+    event.preventDefault();
     var $button = $( event.currentTarget );
     // get group key
     var $buttonGroup = $button.parents('.ai_filter_list');
