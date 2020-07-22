@@ -234,9 +234,14 @@ function aidemos_shortcode_func( $atts ){
 
 			$output .= '<div class="ai_demos_item '. $categories_string .' '. $tags_string .'">';
 				$output .= '<div class="ai_demo_thumb">'. get_the_post_thumbnail() .'</div>';
-				$output .= '<h3>'. get_the_title() .'</h3>';
-				$output .= '<p>'. get_the_excerpt() .'</p>';
-				$output .= '<a href="'. get_the_permalink() .'">Read More</a>';
+				$output .= '<div class="ai_demos_post_content">';
+					$output .= '<h3>'. get_the_title() .'</h3>';
+				$output .= '</div>';
+				$output .= '<div class="ai_demo_content_hover">';
+					$output .= '<h3>'. get_the_title() .'</h3>';
+					$output .= '<p>'. get_the_excerpt() .'</p>';
+					$output .= '<a class="ai_demo_readmore" href="'. get_the_permalink() .'">Read More</a>';
+				$output .= '</div>';
 			$output .= '</div>';
 		}
 		wp_reset_query();
