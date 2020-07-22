@@ -54,6 +54,9 @@ ul.ai_filter_list li.filter_button.is-checked {
 ul.ai_filter_list li.filter_button.is-checked a {
     color: #fff !important;
 }
+ul.ai_filter_list li.filter_button.is-checked a:focus{
+    outline: none;
+}
 .ai_demos_item:hover .ai_demo_content_hover {
     top: 0;
 }
