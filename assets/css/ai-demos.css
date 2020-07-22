@@ -104,3 +104,51 @@ ul.ai_filter_list li.filter_button {
     margin: 2px;
     cursor: pointer;
 }
+
+
+
+
+@media only screen and (max-width: 991px) {
+    .aidemos_filters {
+        width: 26%;
+        padding-right: 20px;
+    }
+    #ai_demos_wrapper {
+        width: 74%;
+        margin-left: -20px;
+    }
+    .aidemos_filter_item {
+        margin-top: 20px;
+    }
+    .ai_demos_item {
+        width: calc(50% - 20px);
+        margin-left: 20px;
+        margin-bottom: 35px;
+    }
+    ul.ai_filter_list li.filter_button {
+        padding: 2px 7px;
+        font-size: 9px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .aidemos_filters {
+        width: 100%;
+    }
+    .aidemos_container {
+        flex-wrap: wrap;
+    }
+    .aidemos_filters {
+        text-align: center;
+        margin-bottom: 26px;
+        padding: 0;
+    }
+    #ai_demos_wrapper {
+        margin: 0;
+        width: 100%;
+    }
+    .ai_demos_item {
+        width: 100%;
+        margin-left: 0;
+    }
+}
