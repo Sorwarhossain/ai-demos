@@ -1,13 +1,25 @@
 (function ($) {
     "use strict";
 
+	
+	
+$(window).load(function(){
+	var targetWidth = 768;
+	if ( $(window).width() >= targetWidth) {     
+	 	
+	}
+});
 
 
     // init Isotope
 var $grid = $('#ai_demos_wrapper').isotope({
     itemSelector: '.ai_demos_item',
-    layoutMode: 'cellsByRow',
+    layoutMode: 'fitRows',
 });
+
+var iso = $grid.data('isotope');
+aiDemoUpdateCount(iso.filteredItems);
+	
   
 // store filter for each group
 var filters = {};
@@ -24,6 +36,9 @@ $('.aidemos_filters').on( 'click', '.filter_button', function( event ) {
     var filterValue = concatValues( filters );
     // set filter for Isotope
     $grid.isotope({ filter: filterValue });
+	
+	aiDemoUpdateCount(iso.filteredItems);
+
 });
   
 // change is-checked class on buttons
@@ -45,13 +60,24 @@ function concatValues( obj ) {
     return value;
 }
 
+function aiDemoUpdateCount(count){
+	var coutn_text = '';
+	if(count.length < 2){
+		coutn_text = count.length + ' demo';
+	} else {
+		coutn_text = count.length + ' demos';
+	}
+	$('.ai_item_count').text(coutn_text);
+}
+
 
     $("#aidemos_reset_filer").click(function(){
+		filters = {};
         $("#ai_demos_wrapper").isotope({
             filter: '*'
         });
         $('.aidemos_filters .filter_button').removeClass('is-checked');
-
+		aiDemoUpdateCount(iso.filteredItems);
     });
     
 
